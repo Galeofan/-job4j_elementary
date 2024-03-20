@@ -1,4 +1,4 @@
-package ru.job4j;
+package ru.job4j.calculator;
 
 public class Main {
     @SuppressWarnings("checkstyle:EmptyLineSeparator")
@@ -10,9 +10,14 @@ public class Main {
         int bacteriumCount = 20000000;
         double distance = 1000000.00;
         boolean workAllow = true;
-        long size = 4000000000000L;
+        long size1 = 4000000000000L;
 
-        System.out.println("Привет, мир");
+        int size = 10;
+        size = 100;
+        size = size - 5;
+        System.out.println(size);
+
+       // System.out.println("Привет, мир");
     }
 
 }
