@@ -6,9 +6,9 @@ import static org.assertj.core.api.Assertions.*;
 class RectangleAreaTest {
 
     @Test
-    void whenP6K2Square2() {
-        int expected = 2;
-        int p = 6;
+    void whenP7K2Square3Dot55() {
+        float expected = 3.55f;
+        int p = 8;
         double k = 2;
         double output = RectangleArea.square(p, k);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
