@@ -13,7 +13,7 @@ class FitTest {
     }
 
     @Test
-    void whenWomanHeight165Then63Dot24() {
+    void whenWomanHeight166Then64Dot4() {
         short input = 166;
         double expected = 64.4;
         double result = Fit.womanWeight(input);
