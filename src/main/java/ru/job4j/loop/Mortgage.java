@@ -4,10 +4,10 @@ public class Mortgage {
     public static int year(double amount, double salary, double percent) {
         int year = 0;
         percent /= 100;
-        double debt = amount + amount * percent;
-            while (debt > 0) {
+            while (amount + amount * percent > 0) {
                 year++;
-                debt = ((debt - salary) * percent) + debt - salary;
+                amount = ((amount + amount * percent - salary) * percent) + amount + amount * percent - salary;
+                System.out.println(amount);
             }
         return year;
     }
