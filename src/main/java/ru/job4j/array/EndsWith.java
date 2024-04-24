@@ -7,6 +7,7 @@ public class EndsWith {
         for (int i = 0; i < postfix.length; i++) {
             if (word[word.length - 1 - i] != postfix[postfix.length - 1 - i]) {
                 result = false;
+                break;
             }
         }
         return result;
