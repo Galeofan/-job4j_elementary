@@ -5,9 +5,9 @@ public class MatrixCheck {
     public static boolean monoHorizontal(char[][] board, int row) {
         boolean result = true;
         for (int j = 0; j < board[row].length; j++) {
-                if (board[row][j] != 'X') {
-                    result = false;
-                    break;
+            if (board[row][j] != 'X') {
+                result = false;
+                break;
             }
         }
         return result;
@@ -29,6 +29,17 @@ public class MatrixCheck {
         for (int i = 0; i < board.length; i++) {
             result[i] = board[i][i];
         }
+        return result;
+    }
+
+    public static boolean isWin(char[][] board) {
+        boolean result = false;
+        for (int i = 0; i < board.length; i++) {
+                if (board[i][i] == 'X' && (monoHorizontal(board, i) || monoVertical(board, i))) {
+                    result = true;
+                    break;
+                }
+            }
         return result;
     }
 }
