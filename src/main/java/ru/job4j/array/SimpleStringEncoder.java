@@ -9,22 +9,14 @@ public class SimpleStringEncoder {
         for (int i = 1; i < input.length(); i++) {
             if (input.charAt(i) == symbol) {
                 counter++;
-                symbol = input.charAt(i);
-            } else if (input.charAt(i) != symbol && counter > 1) {
-                result += symbol + String.valueOf(counter);
+            } else {
+                result += (counter > 1) ? symbol + String.valueOf(counter) : symbol;
                 symbol = input.charAt(i);
                 counter = 1;
-            }  else {
-                result += symbol;
-                symbol = input.charAt(i);
             }
         }
 
-        if (input.charAt(input.length() - 1) == symbol && counter > 1) {
-             result += input.charAt(input.length() - 1) + String.valueOf(counter);
-        } else {
-            result += input.charAt(input.length() - 1);
-        }
+        result += (counter > 1) ? symbol + String.valueOf(counter) : symbol;
         return result;
     }
 }
