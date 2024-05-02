@@ -38,4 +38,42 @@ class MaxTest {
         int result = Max.max(left, right);
         assertThat(result).isEqualTo(right);
     }
+
+    @Test
+    void whenMaxThirdThenThird() {
+        int first = 1;
+        int second = 1;
+        int third = 1;
+        int result = Max.max(first, second, third);
+        assertThat(result).isEqualTo(third);
+    }
+
+    @Test
+    void whenMaxFourthThenFourth() {
+        int first = 1;
+        int second = 1;
+        int third = 1;
+        int fourth = 2;
+        int result = Max.max(first, second, third, fourth);
+        assertThat(result).isEqualTo(fourth);
+    }
+
+    @Test
+    void whenThreeDigitsEqualsThenAny() {
+        int first = 1;
+        int second = 1;
+        int third = 1;
+        int result = Max.max(first, second, third);
+        assertThat(result).isEqualTo(first);
+    }
+
+    @Test
+    void whenFourDigitsEqualsThenAny() {
+        int first = 1;
+        int second = 1;
+        int third = 1;
+        int fourth = 1;
+        int result = Max.max(first, second, third, fourth);
+        assertThat(result).isEqualTo(first);
+    }
 }
